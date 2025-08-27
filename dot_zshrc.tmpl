@@ -1,7 +1,14 @@
 # Path to zsh installation, on linux change to /usr/share/oh-my-zsh.
-# export ZSH="/usr/share/oh-my-zsh"
-# MacOS path.
+{{ if eq .chezmoi.os "darwin" -}}
+#macOS ZSH path
 export ZSH="$HOME/.oh-my-zsh"
+{{ else if eq .chezmoi.os "linux" -}}
+#Linux ZSH path
+export ZSH="/usr/share/oh-my-zsh"
+{{ end -}}
+
+#ZSH_THEME
+ZSH_THEME=robbyrussell
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
