@@ -2,3 +2,7 @@
 .aerospace.toml
 {{ end }}
 
+{{ if ne .chezmoi.os "linux" }}
+.config/hypr
+{{ end }}
+
