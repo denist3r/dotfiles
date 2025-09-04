@@ -96,6 +96,12 @@ run = 'layout floating'
 if.app-id = "com.mitchellh.ghostty"
 run = ["layout tiling"]
 
+[[on-window-detected]]
+if.during-aerospace-startup = false
+if.app-id = 'app.zen-browser.zen'
+if.window-title-regex-substring = 'Picture-in-Picture'
+run = ['layout floating']
+
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
