@@ -1,7 +1,7 @@
 font-family = BlemMono Nerd Font Mono
 
-font-size = 14
-theme = catppuccin-macchiato
+font-size = 12
+theme = Catppuccin Macchiato
 
 # font-family = SFMono Nerd Font 
 shell-integration-features = no-cursor,sudo,no-title
