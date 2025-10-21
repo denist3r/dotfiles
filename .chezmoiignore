@@ -4,5 +4,7 @@
 
 {{ if ne .chezmoi.os "linux" }}
 .config/hypr
+.config/waybar
+.config/walker
 {{ end }}
 
