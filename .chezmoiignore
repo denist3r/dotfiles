@@ -6,5 +6,7 @@
 .config/hypr
 .config/waybar
 .config/walker
+.config/pacman-packages.txt
+.config/scripts/executable_pacman-user-installed-packages
 {{ end }}
 
