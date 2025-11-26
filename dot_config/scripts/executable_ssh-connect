@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# SSH Fuzzy Finder - Connect to servers from ~/.ssh/config using fzf
+# Usage: ./ssh-connect.sh
+
+# Check if fzf is installed
+if ! command -v fzf &> /dev/null; then
+    echo "Error: fzf is not installed."
+    echo "Install it with:"
+    echo "  - macOS: brew install fzf"
+    echo "  - Ubuntu/Debian: sudo apt install fzf"
+    echo "  - Fedora: sudo dnf install fzf"
+    exit 1
+fi
+
+# Check if ~/.ssh/config exists
+if [ ! -f ~/.ssh/config ]; then
+    echo "Error: ~/.ssh/config file not found."
+    exit 1
+fi
+
+# Extract host names from SSH config
+# This matches lines starting with "Host" and extracts the hostname
+# Excludes wildcards (* ?) and common patterns
+hosts=$(grep -i "^Host " ~/.ssh/config | \
+    awk '{print $2}' | \
+    grep -v "\*" | \
+    grep -v "?" | \
+    sort -u)
+
+# Check if any hosts were found
+if [ -z "$hosts" ]; then
+    echo "Error: No hosts found in ~/.ssh/config"
+    exit 1
+fi
+
+# Use fzf to select a host
+selected_host=$(echo "$hosts" | fzf \
+    --height=40% \
+    --border \
+    --prompt="Select SSH host: " \
+    --preview="grep -A 10 'Host {}' ~/.ssh/config" \
+    --preview-window=right:50%:wrap)
+
+# Check if a host was selected
+if [ -z "$selected_host" ]; then
+    echo "No host selected. Exiting."
+    exit 0
+fi
+
+# Connect to the selected host
+echo "Connecting to $selected_host..."
+ssh "$selected_host"
