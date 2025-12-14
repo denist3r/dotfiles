@@ -319,6 +319,9 @@
 	"pulseaudio#output": {
 		"format": "{icon} {volume}%",
 		"format-muted": "{icon} {volume}%",
+		"exec": "pactl -f json list sinks | jq -r '.[] | select(.state == \"RUNNING\" or .name == (pactl get-default-sink)) | .description' | head -n 1",
+    		"exec-if": "pgrep pipewire", 
+    		"on-click": "~/.config/waybar/scripts/audio-changer.sh output",
 		"format-icons": {
 			"default": [ "󰕿", "󰖀", "󰕾" ],
 			"default-muted": "󰝟",
@@ -329,7 +332,6 @@
 		},
 		"min-length": 7,
 		"max-length": 7,
-		"on-click": "~/.config/waybar/scripts/volume.sh output mute",
 		"on-scroll-up": "~/.config/waybar/scripts/volume.sh output raise",
 		"on-scroll-down": "~/.config/waybar/scripts/volume.sh output lower",
 		"tooltip-format": "Output Device: {desc}"
@@ -340,10 +342,12 @@
 		"format-source-muted": "󰍭 {volume}%",
 		"min-length": 7,
 		"max-length": 7,
-		"on-click": "~/.config/waybar/scripts/volume.sh input mute",
 		"on-scroll-up": "~/.config/waybar/scripts/volume.sh input raise",
 		"on-scroll-down": "~/.config/waybar/scripts/volume.sh input lower",
-		"tooltip-format": "Input Device: {desc}"
+		"tooltip-format": "Input Device: {desc}",
+		"exec": "pactl -f json list sources | jq -r '.[] | select(.name == (pactl get-default-source)) | .description'",
+    		"exec-if": "pgrep pipewire",
+    		"on-click": "~/.config/waybar/scripts/audio-changer.sh input"
 	},
 
 	"backlight": {
