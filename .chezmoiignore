@@ -4,11 +4,14 @@
 {{ end }}
 
 {{ if ne .chezmoi.os "linux" }}
-.config/hypr
 .config/waybar
-.config/walker
 .config/wofi
+{{ end }}
+
+
+.config/hypr
+.config/walker
 .config/pacman-packages.txt
 .config/scripts/executable_pacman-user-installed-packages
-{{ end }}
+
 
