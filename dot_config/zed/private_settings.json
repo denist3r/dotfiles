@@ -1,0 +1,41 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "project_panel": {
+    "dock": "right",
+  },
+  "icon_theme": "Zed (Default)",
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha",
+  },
+  "languages": {
+    "PHP": {
+      "tab_size": 2,
+      "hard_tabs": false,
+      "language_servers": ["phpactor", "!intelephense", "drupal-lsp-server"],
+      "formatter": "language_server",
+      "code_actions_on_format": {
+        "source.fixAll.phpactor": true,
+      },
+    },
+  },
+  "file_types": {
+    "PHP": ["module", "inc", "install", "test", "profile", "theme"],
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_parameter_hints": true,
+  },
+}
