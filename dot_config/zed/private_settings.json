@@ -8,7 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "project_panel": {
-    "dock": "right",
+    "dock": "right"
   },
   "icon_theme": "Zed (Default)",
   "base_keymap": "VSCode",
@@ -18,7 +18,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha"
   },
   "languages": {
     "PHP": {
@@ -27,16 +27,15 @@
       "language_servers": ["phpactor", "!intelephense", "drupal-lsp-server"],
       "formatter": "language_server",
       "code_actions_on_format": {
-        "source.fixAll.phpactor": true,
-      },
-    },
+        "source.fixAll.phpactor": true
+      }
+    }
   },
   "file_types": {
-    "PHP": ["module", "inc", "install", "test", "profile", "theme"],
+    "PHP": ["module", "inc", "install", "test", "profile", "theme"]
   },
   "inlay_hints": {
     "enabled": true,
-    "show_parameter_hints": true,
-  },
-  "format_on_save": "off",
+    "show_parameter_hints": true
+  }
 }
