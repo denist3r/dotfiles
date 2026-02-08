@@ -1,0 +1,13 @@
+[user]
+	email = ryzhkoden@gmail.com
+	name = Denys Ryzhko
+
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[core]
+	editor = nvim --clean
+	excludesfile = $HOME/.gitignore_global
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
