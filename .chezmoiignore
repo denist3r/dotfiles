@@ -4,14 +4,13 @@
 {{ end }}
 
 {{ if ne .chezmoi.os "linux" }}
+.config/sway
+.config/waybar
 .config/wofi
 {{ end }}
 
-
-.config/waybar
 .config/hypr
 .config/walker
 .config/pacman-packages.txt
 .config/scripts/executable_pacman-user-installed-packages
-
 

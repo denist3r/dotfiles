@@ -147,7 +147,7 @@ alt-d = 'exec-and-forget open -a /Applications/Discord.app'
 alt-b = 'exec-and-forget open -a /Applications/Zen.app'
 alt-o = 'exec-and-forget open -a /Applications/Obsidian.app'
 alt-g = 'exec-and-forget open -a /Applications/Ghostty.app'
-alt-s = 'exec-and-forget open -a /Applications/Safari.app'
+alt-s = 'exec-and-forget open -a /Applications/Slack.app'
 alt-q = 'exec-and-forget open -a /System/Applications/QuickTime Player.app'
 
 
