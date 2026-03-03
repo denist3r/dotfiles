@@ -1,7 +1,7 @@
 font-family = Iosevka Nerd Font Mono
 
 font-size = 12
-theme = Catppuccin Macchiato
+theme = Catppuccin Frappe
 
 # font-family = SFMono Nerd Font 
 shell-integration-features = no-cursor,sudo,no-title
