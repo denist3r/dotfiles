@@ -7,6 +7,16 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "single_file_review": false,
+    "play_sound_when_agent_done": true,
+    "use_modifier_to_send": true,
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
   "project_panel": {
     "dock": "right",
   },
@@ -24,8 +34,7 @@
     "PHP": {
       "tab_size": 2,
       "hard_tabs": false,
-      // "language_servers": ["phpactor", "!intelephense", "drupal-lsp-server"],
-      "language_servers": ["phpactor", "!intelephense"],
+      "language_servers": ["phpactor", "!intelephense", "drupal-lsp-server"],
       "formatter": "language_server",
       "code_actions_on_format": {
         "source.fixAll.phpactor": true,
