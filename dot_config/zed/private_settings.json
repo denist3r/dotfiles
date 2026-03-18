@@ -34,7 +34,7 @@
     "PHP": {
       "tab_size": 2,
       "hard_tabs": false,
-      "language_servers": ["phpactor", "!intelephense", "drupal-lsp-server"],
+      "language_servers": ["intelephense", "drupal-lsp-server", "!phpactor"],
       "formatter": "language_server",
       "code_actions_on_format": {
         "source.fixAll.phpactor": true,
