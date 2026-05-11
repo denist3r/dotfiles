@@ -1,7 +1,7 @@
 font-family = Iosevka Nerd Font Mono
 
 font-size = 15
-theme = Cutie Pro
+theme = Vague
 
 # font-family = SFMono Nerd Font 
 shell-integration-features = no-cursor,sudo,no-title
