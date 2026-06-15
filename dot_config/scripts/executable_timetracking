@@ -3,40 +3,39 @@
 CATEGORIES=(
   "WORK"
   "LEARNING"
-  "LINUX"
   "WASTE"
   "STOP"
 )
-
 # Categories that should trigger Raycast Focus
 FOCUS_CATEGORIES=("WORK" "LEARNING")
-
 selected=$(printf "%s\n" "${CATEGORIES[@]}" | fzf --margin 10% --color="bw" --bind 'q:abort')
 sk_status=$?
-
 if [[ $sk_status -ne 0 || -z "$selected" ]]; then
   exit 0
 fi
-
 tmux set -g status-interval 5
-
 if [[ "$selected" == "STOP" ]]; then
   timew stop >/dev/null 2>&1
   tmux set -g status-right ""
-  # Complete any active Raycast Focus session
   open "raycast://focus/complete"
 else
   timew start "$selected" >/dev/null 2>&1
   tmux set -g status-right "$selected #(timew | awk '/^ *Total/ {print \$NF}')"
 
-  # Check if selected category should trigger Focus mode
+  # Always complete any active Focus session first
+  open -g "raycast://focus/complete"
+
+  # Start a new Focus session only for focus categories
+  is_focus_cat=false
   for cat in "${FOCUS_CATEGORIES[@]}"; do
     if [[ "$selected" == "$cat" ]]; then
-      # Complete any existing session first, then start a new one
-      open -g "raycast://focus/complete"
-      sleep 0.5
-      open -g "raycast://focus/start?goal=${selected}&categories=social,news,shopping,gaming&mode=block"
+      is_focus_cat=true
       break
     fi
   done
+
+  if $is_focus_cat; then
+    sleep 0.5
+    open -g "raycast://focus/start?goal=${selected}&categories=social,news,shopping,gaming&mode=block"
+  fi
 fi
