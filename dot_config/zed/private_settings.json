@@ -26,6 +26,9 @@
   },
   "agent_servers": {
     "claude-acp": {
+      "default_config_options": {
+        "model": "default"
+      },
       "type": "registry",
     },
   },
@@ -34,7 +37,7 @@
   },
   "icon_theme": {
     "mode": "light",
-    "light": "Zed (Default)",
+    "light": "Colored Zed Icons Theme Dark",
     "dark": "Zed (Default)",
   },
   "base_keymap": "VSCode",
@@ -44,7 +47,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Vague",
+    "dark": "Gruvbox Material Dark",
   },
   "languages": {
     "PHP": {

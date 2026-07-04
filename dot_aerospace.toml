@@ -125,8 +125,10 @@ alt-6 = 'workspace 6' # Slack
 alt-7 = 'workspace 7' # Postman
 alt-8 = 'workspace 8' # Docker/Podmam
 alt-9 = 'workspace 9' # Bitwarden
-alt-0 = 'workspace 10' # Discord + Telegram
+alt-0 = 'workspace 10' # Telegram
+
 alt-m = 'workspace M' # Music
+alt-d = 'workspace D' # Discord
 alt-f = 'workspace F' # Figma
 alt-e = 'workspace E' # Finder
 
@@ -143,14 +145,15 @@ alt-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
 alt-shift-0 = 'move-node-to-workspace 10 --focus-follows-window'
 
 alt-shift-m = 'move-node-to-workspace M --focus-follows-window'
+alt-shift-d = 'move-node-to-workspace D --focus-follows-window'
 alt-shift-f = 'move-node-to-workspace F --focus-follows-window'
 alt-shift-e = 'move-node-to-workspace E --focus-follows-window'
 
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-alt-t = 'exec-and-forget open -a /Applications/Telegram.app'
-alt-d = 'exec-and-forget open -a /Applications/Discord.app'
+# alt-t = 'exec-and-forget open -a /Applications/Telegram.app'
+# alt-d = 'exec-and-forget open -a /Applications/Discord.app'
 alt-b = 'exec-and-forget open -a /Applications/Helium.app'
 alt-g = 'exec-and-forget open -a /Applications/Ghostty.app'
 alt-s = 'exec-and-forget open -a /Applications/Slack.app'

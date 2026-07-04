@@ -1,7 +1,7 @@
 font-family = Iosevka Nerd Font Mono
 
 font-size = 15
-theme = Vague
+theme = Gruvbox Material Dark
 
 # font-family = SFMono Nerd Font 
 shell-integration-features = no-cursor,sudo,no-title
