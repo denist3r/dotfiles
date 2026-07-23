@@ -22,23 +22,23 @@
     "dock": "right",
     "single_file_review": false,
     "play_sound_when_agent_done": "always",
-    "use_modifier_to_send": true,
+    "use_modifier_to_send": true
   },
   "agent_servers": {
     "claude-acp": {
       "default_config_options": {
         "model": "default"
       },
-      "type": "registry",
-    },
+      "type": "registry"
+    }
   },
   "project_panel": {
-    "dock": "right",
+    "dock": "right"
   },
   "icon_theme": {
     "mode": "light",
     "light": "Colored Zed Icons Theme Dark",
-    "dark": "Zed (Default)",
+    "dark": "Zed (Default)"
   },
   "base_keymap": "VSCode",
   "vim_mode": true,
@@ -47,24 +47,36 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Gruvbox Material Dark",
+    "dark": "Gruvbox Material Dark"
+  },
+  "lsp": {
+    "tinymist": {
+      "settings": {
+        "exportPdf": "onSave",
+        "outputPath": "$root/$",
+        "formatterMode": "typstyle"
+      },
+      "initialization_options": {
+        "preview": {
+          "background": {
+            "enabled": true
+          }
+        }
+      }
+    }
   },
   "languages": {
     "PHP": {
       "tab_size": 2,
       "hard_tabs": false,
-      "language_servers": ["intelephense", "drupal-lsp-server", "!phpactor"],
+      "language_servers": ["intelephense", "!drupal-lsp-server", "!phpactor"],
       "formatter": "language_server",
       "code_actions_on_format": {
-        "source.fixAll.phpactor": true,
-      },
-    },
+        "source.fixAll.phpactor": true
+      }
+    }
   },
   "file_types": {
-    "PHP": ["module", "inc", "install", "test", "profile", "theme"],
-  },
-  "inlay_hints": {
-    "enabled": true,
-    "show_parameter_hints": true,
-  },
+    "PHP": ["module", "inc", "install", "test", "profile", "theme"]
+  }
 }
