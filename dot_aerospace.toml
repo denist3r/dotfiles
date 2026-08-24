@@ -51,6 +51,10 @@ if.app-name-regex-substring = 'figma'
 run = 'move-node-to-workspace F'
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'discord'
+run = 'move-node-to-workspace D'
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'music'
 run = 'move-node-to-workspace M'
 
@@ -86,10 +90,10 @@ preset = 'qwerty'
 [gaps]
 inner.horizontal = 8
 inner.vertical = 8
-outer.left = 8
-outer.bottom = 8
-outer.top = 8
-outer.right = 8
+outer.left = 0
+outer.bottom = 0
+outer.top = 0
+outer.right = 0
 
 [mode.main.binding]
 alt-ctrl-shift-f = 'fullscreen'
